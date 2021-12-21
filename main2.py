@@ -26,8 +26,8 @@ JOIN_BUTTON = [
     InlineKeyboardMarkup(
         [InlineKeyboardButton(text="Search Here", switch_inline_query_current_chat=update.text)]
 
-    )
-]
+    ]
+)
 
 
 
