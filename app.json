@@ -1,0 +1,51 @@
+{
+    "name": "Google Inline Search Bot",
+    "description": "Telegram bot for Google Search Using Inline",
+    "logo": "https://telegra.ph/file/1c41ded2dd871eb36bd7e.png",
+    "keywords": [
+        "pytgcalls",
+        "telegram bot",
+        "Inline Sea",
+        "pyrogram"
+    ],
+    "website": "https://t.me/Dp_Bots",
+    "repository": "https://github.com/OsharaShaveen/Google-Search-Inline-Bot",
+    "success_url": "https://t.me/WhiteDevilOp999",
+    "env": {
+        "API_ID": {
+            "description": "your API_ID from my.telegram.org",
+            "required": true
+            "value": "13565869"
+        },
+        "API_HASH": {
+            "description": "your API_HASH from my.telegram.org",
+            "required": true
+            "value": "192a656e3e60fa7bacf96d9bfa910f47"
+        },
+        "BOT_TOKEN": {
+            "description": "your bot token from @BotFather",
+            "required": true
+            "value": "5002147720:AAHgPh2lpyjdvV8GRpPuZdVIeUpaI7Empk4"
+        }
+
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
