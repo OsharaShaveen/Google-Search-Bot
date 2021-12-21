@@ -34,13 +34,18 @@ SEARCH_BUTTON =  [
                 [InlineKeyboardButton(text="Search in another chat", switch_inline_query=update.text)]
             ]
         ),
+    disable_web_page_preview=True,
+    quote=True
+    )
+
+
 
 @Bot.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
     await update.reply_text(
         text=START_TEXT.format(update.from_user.mention),
         reply_markup=InlineKeyboardMarkup([JOIN_BUTTON]),
-        reply_markup=InlineKeyboardMarkup([
+        reply_markup=InlineKeyboardMarkup([SEARCH_BUTTON])
         disable_web_page_preview=True,
         quote=True
     )
