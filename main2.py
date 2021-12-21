@@ -23,9 +23,9 @@ I am a google search bot.
 Made by @WhiteDevilOp999"""
 
 JOIN_BUTTON = [
-    InlineKeyboardButton(
-        text='⚙ Join Updates Channel ⚙',
-        url='switch_inline_query_current_chat=update.text'
+    InlineKeyboardMarkup(
+        [InlineKeyboardButton(text="Search Here", switch_inline_query_current_chat=update.text)]
+
     )
 ]
 
