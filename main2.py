@@ -25,18 +25,11 @@ Made by @WhiteDevilOp999"""
 JOIN_BUTTON = [
     InlineKeyboardButton(
         text='⚙ Join Updates Channel ⚙',
-        url='https://t.me/svftm'
+        url='switch_inline_query_current_chat=update.text'
     )
 ]
 
-SEARCH_BUTTON =  [
-                [InlineKeyboardButton(text="Search Here", switch_inline_query_current_chat=update.text)],
-                [InlineKeyboardButton(text="Search in another chat", switch_inline_query=update.text)]
-            ]
-        ),
-    disable_web_page_preview=True,
-    quote=True
-    )
+
 
 
 
@@ -45,7 +38,7 @@ async def start(bot, update):
     await update.reply_text(
         text=START_TEXT.format(update.from_user.mention),
         reply_markup=InlineKeyboardMarkup([JOIN_BUTTON]),
-        reply_markup=InlineKeyboardMarkup([SEARCH_BUTTON])
+
         disable_web_page_preview=True,
         quote=True
     )
